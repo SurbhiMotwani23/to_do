@@ -67,9 +67,8 @@ class MainActivity : AppCompatActivity() {
         ListItems = findViewById(R.id.ListItems)
         items = ArrayList()
         readToDo()
-        itemsAdapter = object : ArrayAdapter<String?>(
-            this,
-            R.layout.simple_list_item_1, items!!
+        itemsAdapter = object : ArrayAdapter<String?>(this,
+            R.layout.simple_list_item_1, items!! as List<String?>
         ) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 // Cast the list view each item as text view
